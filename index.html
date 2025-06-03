@@ -1,249 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Madouri Samir - Dessinateur en bâtiment freelance</title>
-  <style>
-    /* Reset minimaliste */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f6f7;
-      color: #333333;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    header {
-      background-color: #222222;
-      color: #f0f0f0;
-      padding: 25px 20px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    }
-    header h1 {
-      margin-bottom: 8px;
-      font-size: 2.4rem;
-      letter-spacing: 2px;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Madouri Samir - À propos</title>
+<style>
+  body {
+    margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f8f9; color: #44494a;
+    min-height: 100vh; display: flex; flex-direction: column;
+  }
+  header, footer {
+    background: #3e4548; color: #f0f0f0; padding: 20px;
+    text-align: center;
+  }
+  nav a {
+    color: #f0f0f0; margin: 0 15px; font-weight: 600; text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  nav a:hover, nav a.active {
+    color: #d35748;
+  }
+  main {
+    flex: 1; max-width: 900px; margin: 40px auto; padding: 0 20px;
+    background: white; border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  h1 {
+    margin-bottom: 20px; font-size: 2.4rem;
+    letter-spacing: 2px;
+  }
+  p {
+    font-size: 1.1rem; line-height: 1.7; margin-bottom: 15px;
+  }
+  footer p {
+    margin: 0; font-size: 0.9rem;
+  }
+  footer a {
+    color: #d35748; text-decoration: none; margin: 0 8px;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  @media(max-width: 600px) {
     nav a {
-      color: #ccc;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: 600;
-      transition: color 0.3s ease;
+      display: block; margin: 10px 0;
     }
-    nav a:hover {
-      color: #ff6f61; /* un rouge corail discret */
-    }
-    main {
-      flex: 1;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background: white;
-      border-radius: 6px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    section {
-      padding: 30px 0;
-      border-bottom: 1px solid #ddd;
-    }
-    section:last-child {
-      border-bottom: none;
-    }
-    h2 {
-      margin-bottom: 15px;
-      color: #222;
-      font-size: 1.8rem;
-      border-left: 5px solid #ff6f61;
-      padding-left: 12px;
-    }
-    p, li {
-      font-size: 1.05rem;
-      color: #444;
-      margin-bottom: 10px;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-bottom: 15px;
-    }
-    ul li {
-      margin-bottom: 8px;
-    }
-    .projects-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-    .project-item {
-      background: #fafafa;
-      padding: 15px;
-      border-radius: 5px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
-    }
-    .project-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-    .project-item h3 {
-      margin-bottom: 10px;
-      color: #333;
-      font-size: 1.2rem;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 500px;
-    }
-    label {
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: #222;
-    }
-    input, textarea {
-      padding: 10px;
-      font-size: 1rem;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      resize: vertical;
-      transition: border-color 0.3s ease;
-    }
-    input:focus, textarea:focus {
-      border-color: #ff6f61;
-      outline: none;
-    }
-    button {
-      align-self: flex-start;
-      padding: 12px 25px;
-      font-size: 1rem;
-      background-color: #ff6f61;
-      border: none;
-      color: white;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: 700;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #e65c50;
-    }
-    footer {
-      background-color: #222;
-      color: #aaa;
-      text-align: center;
-      padding: 15px 10px;
-      font-size: 0.9rem;
-      margin-top: auto;
-    }
-    footer a {
-      color: #ff6f61;
-      text-decoration: none;
-      margin: 0 8px;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    /* Responsive */
-    @media (max-width: 700px) {
-      .projects-list {
-        grid-template-columns: 1fr;
-      }
-      nav a {
-        display: inline-block;
-        margin: 10px 8px;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Madouri Samir</h1>
-    <nav>
-      <a href="#apropos">À propos</a>
-      <a href="#competences">Compétences</a>
-      <a href="#projets">Projets</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="apropos">
-      <h2>À propos de moi</h2>
-      <p>Je suis dessinateur en bâtiment freelance avec plus de 10 ans d'expérience. Je réalise des plans détaillés, des dossiers de permis de construire ainsi que des modélisations 3D. Je travaille principalement à distance, en collaboration avec des architectes, des maîtres d’œuvre et des particuliers. Sérieux, réactif et minutieux, je m'engage à fournir un travail de qualité conforme aux normes françaises.</p>
-      <p>Passionné par le bâtiment et l'architecture, je m'efforce de trouver des solutions techniques adaptées à chaque projet, tout en respectant les contraintes réglementaires et budgétaires.</p>
-    </section>
-
-    <section id="competences">
-      <h2>Compétences</h2>
-      <ul>
-        <li><strong>Dessin architectural :</strong> plans techniques, élévations, coupes, détails.</li>
-        <li><strong>Logiciels :</strong> AutoCAD, SketchUp, Revit (niveau basique).</li>
-        <li><strong>Modélisation 3D :</strong> création de maquettes numériques pour visualisation.</li>
-        <li><strong>Dossiers administratifs :</strong> permis de construire et autorisations d'urbanisme.</li>
-        <li><strong>Architecture résidentielle :</strong> rénovations, extensions et constructions neuves.</li>
-        <li><strong>Collaboration à distance :</strong> maîtrise des outils collaboratifs pour suivre les projets.</li>
-        <li><strong>Connaissance des normes françaises :</strong> réglementation thermique, sécurité, urbanisme.</li>
-        <li><strong>Relevés d’état des lieux :</strong> prises de mesures et réalisation de plans existants.</li>
-        <li><strong>Annotations et corrections :</strong> gestion des retours clients sur PDF.</li>
-      </ul>
-    </section>
-
-    <section id="projets">
-      <h2>Projets récents</h2>
-      <div class="projects-list">
-        <article class="project-item">
-          <h3>Extension de maison à Lyon</h3>
-          <p>Conception complète des plans d’extension, validation avec l’architecte, dossier de permis de construire soumis avec succès.</p>
-        </article>
-        <article class="project-item">
-          <h3>Rénovation d’appartement à Paris</h3>
-          <p>Plans techniques détaillés, coordination avec les artisans, modélisation 3D pour visualisation avant travaux.</p>
-        </article>
-        <article class="project-item">
-          <h3>Surélévation d’une maison individuelle</h3>
-          <p>Création de plans structurels et architecturaux, dossier complet pour la mairie, suivi des retours administratifs.</p>
-        </article>
-        <article class="project-item">
-          <h3>Aménagement de locaux commerciaux</h3>
-          <p>Réalisation des plans d’agencement intérieur et des documents nécessaires à l’obtention du permis.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Vous souhaitez discuter d’un projet ou obtenir un devis ? N’hésitez pas à me contacter via ce formulaire :</p>
-      <form action="mailto:samirmadouri@example.com" method="post" enctype="text/plain">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required />
-
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Envoyer</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Madouri Samir - Dessinateur en bâtiment freelance</p>
-    <p>
-      <a href="https://linkedin.com/in/samirmadouri" target="_blank" rel="noopener">LinkedIn</a> |
-      <a href="https://github.com/samirmadouri" target="_blank" rel="noopener">GitHub</a>
-    </p>
-  </footer>
+<header>
+  <nav>
+    <a href="index.html" class="active">À propos</a>
+    <a href="competences.html">Compétences</a>
+    <a href="projets.html">Projets</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<main>
+  <h1>À propos de moi</h1>
+  <p>Je suis dessinateur en bâtiment freelance avec plus de 10 ans d'expérience. Je réalise des plans détaillés, des dossiers de permis de construire ainsi que des modélisations 3D. Je travaille principalement à distance, en collaboration avec des architectes, des maîtres d’œuvre et des particuliers. Sérieux, réactif et minutieux, je m'engage à fournir un travail de qualité conforme aux normes françaises.</p>
+  <p>Passionné par le bâtiment et l'architecture, je m'efforce de trouver des solutions techniques adaptées à chaque projet, tout en respectant les contraintes réglementaires et budgétaires.</p>
+</main>
+<footer>
+  <p>© 2025 Madouri Samir - Dessinateur en bâtiment freelance</p>
+  <p>
+    <a href="https://linkedin.com/in/samirmadouri" target="_blank" rel="noopener">LinkedIn</a> |
+    <a href="https://github.com/samirmadouri" target="_blank" rel="noopener">GitHub</a>
+  </p>
+</footer>
 </body>
 </html>
