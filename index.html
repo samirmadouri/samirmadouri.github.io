@@ -1,227 +1,58 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Samir Madouri - Dessinateur en bâtiment</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet" />
-  <style>
-    /* Reset et styles de base */
-    * {
-      box-sizing: border-box;
-      margin: 0; padding: 0;
-      font-family: 'Open Sans', sans-serif;
-    }
-    body {
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    a {
-      color: #d35400;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Conteneur principal */
-    .container {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 0 15px;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 6px;
-    }
-
-    /* Header */
-    header {
-      padding: 20px 0;
-      border-bottom: 2px solid #d35400;
-      text-align: center;
-    }
-    header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 2.2rem;
-      color: #2c3e50;
-    }
-    header p {
-      font-size: 1.1rem;
-      color: #666;
-      margin-top: 6px;
-    }
-
-    /* Navigation */
-    nav {
-      margin-top: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    nav a {
-      padding: 6px 10px;
-      border-radius: 4px;
-      transition: background 0.3s;
-    }
-    nav a:hover {
-      background: #d35400;
-      color: white;
-    }
-
-    /* Sections */
-    section {
-      padding: 30px 20px;
-      border-bottom: 1px solid #eee;
-    }
-    section:last-child {
-      border-bottom: none;
-    }
-    h2 {
-      font-family: 'Montserrat', sans-serif;
-      color: #d35400;
-      margin-bottom: 15px;
-      font-size: 1.8rem;
-      border-left: 5px solid #d35400;
-      padding-left: 10px;
-    }
-
-    /* Portfolio images */
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-      gap: 15px;
-    }
-    .portfolio-grid img {
-      width: 100%;
-      border-radius: 5px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-      cursor: pointer;
-    }
-    .portfolio-grid img:hover {
-      transform: scale(1.05);
-    }
-
-    /* Contact form */
-    form {
-      max-width: 500px;
-      margin-top: 10px;
-    }
-    form label {
-      display: block;
-      margin: 15px 0 6px;
-      font-weight: 600;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-family: inherit;
-      font-size: 1rem;
-      resize: vertical;
-    }
-    form button {
-      margin-top: 15px;
-      background: #d35400;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 5px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    form button:hover {
-      background: #e67e22;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #999;
-      margin-top: auto;
-      border-top: 1px solid #eee;
-    }
-
-    /* Responsive nav menu for small screens */
-    @media (max-width: 500px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-  </style>
+  <title>Madouri Samir - Freelance Architectural Draftsman</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div class="container">
+  <header>
+    <h1>Madouri Samir</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <header>
-      <h1>Samir Madouri</h1>
-      <p>Dessinateur en bâtiment - Plans & Projets</p>
-      <nav>
-        <a href="#about">À propos</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Freelance architectural draftsman with over 10 years of experience in creating detailed building plans, permit drawings, and 3D models. Specialized in remote collaboration with architects, contractors, and homeowners. Reliable, responsive, and detail-focused.
+    </p>
+  </section>
 
-    <section id="about">
-      <h2>À propos de moi</h2>
-      <p>Fort de 10 ans d'expérience en dessin bâtiment, je conçois des plans précis et adaptés à chaque projet. Expert ArchiCAD, AutoCAD, SketchUp et Photoshop.</p>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Architectural Drafting</li>
+      <li>AutoCAD, SketchUp, Revit (basic)</li>
+      <li>2D Drawings & 3D Modeling</li>
+      <li>Building Permit Drawings (France)</li>
+      <li>Residential Architecture</li>
+      <li>Remote Collaboration</li>
+      <li>French Building Code Knowledge</li>
+      <li>Existing Condition Surveys</li>
+      <li>PDF Markups & Redlines</li>
+    </ul>
+  </section>
 
-    <section id="services">
-      <h2>Mes services</h2>
-      <ul>
-        <li>Plans d'exécution détaillés</li>
-        <li>Modélisation 3D et rendu SketchUp</li>
-        <li>Études techniques & conseils</li>
-        <li>Adaptation des plans selon la réglementation finlandaise</li>
-      </ul>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Coming soon — I am currently working on adding a portfolio of architectural drafting projects.</p>
+  </section>
 
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <div class="portfolio-grid">
-        <img src="https://via.placeholder.com/400x300?text=Plan+1" alt="Plan 1" />
-        <img src="https://via.placeholder.com/400x300?text=Plan+2" alt="Plan 2" />
-        <img src="https://via.placeholder.com/400x300?text=Plan+3" alt="Plan 3" />
-        <img src="https://via.placeholder.com/400x300?text=Plan+4" alt="Plan 4" />
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contactez-moi</h2>
-      <form action="mailto:samir.madouri92@gmail.com" method="post" enctype="text/plain">
-        <label for="name">Nom</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Envoyer</button>
-      </form>
-    </section>
-
-  </div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:samirmadouri@example.com">samirmadouri@example.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/samirmadouri" target="_blank" rel="noopener">linkedin.com/in/samirmadouri</a></p>
+  </section>
 
   <footer>
-    &copy; 2025 Samir Madouri - Tous droits réservés
+    <p>&copy; 2025 Madouri Samir. All rights reserved.</p>
   </footer>
 
 </body>
