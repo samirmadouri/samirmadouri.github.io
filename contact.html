@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Madouri Samir - Contact</title>
+<style>
+  /* même style que les autres */
+  body {
+    margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f8f9; color: #44494a;
+    min-height: 100vh; display: flex; flex-direction: column;
+  }
+  header, footer {
+    background: #3e4548; color: #f0f0f0; padding: 20px;
+    text-align: center;
+  }
+  nav a {
+    color: #f0f0f0; margin: 0 15px; font-weight: 600; text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  nav a:hover, nav a.active {
+    color: #d35748;
+  }
+  main {
+    flex: 1; max-width: 600px; margin: 40px auto; padding: 0 20px;
+    background: white; border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  h1 {
+    margin-bottom: 20px; font-size: 2.4rem;
+    letter-spacing: 2px;
+  }
+  form {
+    display: flex; flex-direction: column;
+  }
+  label {
+    margin-top: 15px; margin-bottom: 6px;
+    font-weight: 600;
+  }
+  input, textarea {
+    padding: 10px; border: 1px solid #ccc; border-radius: 4px;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  button {
+    margin-top: 20px; padding: 12px; background: #d35748;
+    color: white; border: none; border-radius: 4px; font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  button:hover {
+    background: #b04137;
+  }
+  footer p {
+    margin: 0; font-size: 0.9rem;
+  }
+  footer a {
+    color: #d35748; text-decoration: none; margin: 0 8px;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  @media(max-width: 600px) {
+    nav a {
+      display: block; margin: 10px 0;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="index.html">À propos</a>
+    <a href="competences.html">Compétences</a>
+    <a href="projets.html">Projets</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+<main>
+  <h1>Contactez-moi</h1>
+  <p>Vous souhaitez discuter d’un projet ou obtenir un devis ? N’hésitez pas à me contacter via ce formulaire :</p>
+  <form action="mailto:samirmadouri@example.com" method="post" enctype="text/plain">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required />
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Envoyer</button>
+  </form>
+</main>
+<footer>
+  <p>© 2025 Madouri Samir - Dessinateur en bâtiment freelance</p>
+  <p>
+    <a href="https://linkedin.com/in/samirmadouri" target="_blank" rel="noopener">LinkedIn</a> |
+    <a href="https://github.com/samirmadouri" target="_blank" rel="noopener">GitHub</a>
+  </p>
+</footer>
+</body>
+</html>
