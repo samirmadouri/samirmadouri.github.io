@@ -1,0 +1,81 @@
+/* style.css - style sobre pour ton site */
+
+/* Couleurs générales */
+body {
+  font-family: Arial, sans-serif;
+  color: #2c3e50; /* bleu marine foncé */
+  background-color: #f8f9fa; /* fond clair */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header & navigation */
+header, nav, footer {
+  background-color: #2c3e50; /* bleu marine foncé */
+  color: white;
+  padding: 20px;
+}
+
+nav a {
+  color: #ecf0f1; /* gris clair */
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #2980b9; /* bleu clair au survol */
+}
+
+/* Titres */
+h1, h2, h3 {
+  color: #34495e; /* gris bleuté */
+}
+
+/* Boutons */
+button, .btn {
+  background-color: #34495e;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+button:hover, .btn:hover {
+  background-color: #2980b9;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+/* Liens */
+a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
