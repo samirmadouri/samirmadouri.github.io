@@ -1,79 +1,60 @@
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
   color: #333;
 }
 
-header {
-  background-color: #004466;
-  color: white;
-  padding: 1em;
+.header {
+  background: #000;
+  color: #fcd200;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 15px;
+}
+
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.hero {
+  background: #fcd200;
+  padding: 3rem 2rem;
   text-align: center;
+  color: #000;
 }
 
-nav {
-  margin-top: 1em;
+.services ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-nav a {
-  color: white;
+.services li {
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background: #fcd200;
+  padding: 0.5rem 1rem;
+  color: #000;
   text-decoration: none;
-  margin: 0 1em;
-}
-
-main {
-  padding: 2em;
+  font-weight: bold;
 }
 
 footer {
-  background-color: #eee;
-  color: #555;
-  text-align: center;
-  padding: 1em;
-  margin-top: 2em;
-}
-
-h1, h2 {
-  color: #004466;
-}
-
-.btn, button {
-  background-color: #004466;
+  background: #222;
   color: white;
-  border: none;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1em;
+  text-align: center;
+  padding: 1rem;
 }
-
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  gap: 1em;
-}
-
-input, textarea {
-  padding: 0.5em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.portfolio-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-}
-
-.portfolio-gallery img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
