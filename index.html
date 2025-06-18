@@ -1,53 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Samir Madouri - Dessinateur en bâtiment</title>
-  <link rel="stylesheet" href="css/style.css"/>
-</head>
-<body>
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <img src="images/logo.png" alt="Logo Samir Madouri" class="logo">
-      <h1>Samir Madouri</h1>
-      <h2>Dessinateur en bâtiment</h2>
-      <p>Vos projets, vos plans, à distance</p>
-      <a href="#contact" class="btn">Demander un devis</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>À Vos Projets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-black text-white font-sans">
+    <!-- Barre de contact -->
+    <div class="bg-black text-gray-300 text-sm border-b border-gray-700">
+      <div class="max-w-5xl mx-auto px-4 py-2 flex justify-end space-x-6">
+        <span>📞 06 00 00 00 00</span>
+        <a href="mailto:contact@avosprojets.fr" class="hover:text-yellow-400">✉️ contact@avosprojets.fr</a>
+        <a href="https://www.linkedin.com/in/ton-profil" target="_blank" class="hover:text-yellow-400">🔗 LinkedIn</a>
+      </div>
     </div>
-  </header>
 
-  <section class="about">
-    <h2>À propos</h2>
-    <p>Avec plus de 10 ans d’expérience, je vous accompagne dans tous vos projets de construction, extension ou rénovation. Je réalise vos plans à distance avec rigueur, réactivité et professionnalisme.</p>
-  </section>
+    <!-- En-tête -->
+    <header class="max-w-5xl mx-auto px-4 py-6 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img src="images/logo.png" alt="Logo À Vos Projets" class="h-12 w-auto mr-3" />
+        <span class="text-xl font-bold text-yellow-400">À Vos Projets</span>
+      </div>
 
-  <section class="services">
-    <h2>Mes services</h2>
-    <div class="grid">
-      <div class="card">📐 Plans de permis de construire</div>
-      <div class="card">📊 Déclarations préalables</div>
-      <div class="card">🏠 Plans 2D/3D de projets</div>
-      <div class="card">✏️ Relevés et modifications</div>
-    </div>
-  </section>
+      <!-- Menu -->
+      <nav>
+        <ul class="flex space-x-6 text-sm font-medium">
+          <li><a href="#accueil" class="hover:underline hover:text-yellow-400">Accueil</a></li>
+          <li><a href="#qui-sommes-nous" class="hover:underline hover:text-yellow-400">Qui sommes-nous</a></li>
+          <li><a href="#services" class="hover:underline hover:text-yellow-400">Nos services</a></li>
+          <li><a href="#realisations" class="hover:underline hover:text-yellow-400">Réalisations</a></li>
+          <li><a href="#pro" class="hover:underline hover:text-yellow-400">Vous êtes professionnel</a></li>
+          <li><a href="#contact" class="hover:underline hover:text-yellow-400">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <section id="contact" class="contact">
-    <h2>Me contacter</h2>
-    <form action="mailto:samir.madouri@email.com" method="post" enctype="text/plain">
-      <input type="text" name="Nom" placeholder="Votre nom" required>
-      <input type="email" name="Email" placeholder="Votre email" required>
-      <textarea name="Message" placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-    <p>📧 samir.madouri@email.com</p>
-    <p>📞 06 XX XX XX XX</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Samir Madouri - Tous droits réservés</p>
-  </footer>
-</body>
+    <!-- Section Héros -->
+    <section class="text-center py-20">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Donnez vie à vos projets
+      </h1>
+      <p class="text-lg mb-8 text-gray-300 max-w-2xl mx-auto">
+        Dessinateur en bâtiment à distance — plans, permis de construire, conseils.
+      </p>
+      <a href="#contact" class="inline-block bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition">
+        Me contacter
+      </a>
+    </section>
+  </body>
 </html>
