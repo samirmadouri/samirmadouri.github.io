@@ -1,181 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>A Vos Projets</title>
-  <style>
-    /* Reset basique */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>À Vos Projets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fafafa; /* fond un peu moins blanc */
-      color: #222;
-    }
-
-    /* Conteneur central */
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    /* Barre contact */
-    .barre-contact {
-      background-color: #f9f9f9;
-      border-bottom: 1px solid #ccc;
-      font-size: 14px;
-      color: #444;
-      height: 40px;
-    }
-
-    .contact-left {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      color: #444;
-      font-weight: 500;
-    }
-
-    .icon-phone {
-      width: 18px;
-      height: 18px;
-      stroke: #f1c40f; /* jaune */
-      stroke-width: 2;
-      fill: none;
-    }
-
-    .icon-mail {
-      font-size: 16px;
-      color: #f1c40f;
-    }
-
-    .highlight {
-      color: #f1c40f;
-      font-weight: 600;
-    }
-
-    a.link {
-      color: #f1c40f;
-      text-decoration: none;
-      transition: opacity 0.2s ease;
-    }
-
-    a.link:hover {
-      opacity: 0.7;
-      text-decoration: underline;
-    }
-
-    .contact-right a {
-      color: #f1c40f;
-      display: flex;
-      align-items: center;
-    }
-
-    .icon-linkedin {
-      width: 22px;
-      height: 22px;
-    }
-
-    /* En-tête */
-    .header {
-      background-color: #f9f9f9;
-      border-bottom: 1px solid #ccc;
-      padding: 20px 0;
-    }
-
-    /* Logo */
-    .logo img {
-      height: 40px;
-      width: auto;
-      display: block;
-    }
-
-    /* Menu */
-    .menu {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
-
-    .menu li {
-      /* forcer sur une ligne */
-    }
-
-    a.link-menu {
-      white-space: nowrap;
-      color: #444;
-      font-weight: 600;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    a.link-menu:hover {
-      color: #f1c40f;
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Barre contact -->
-  <div class="barre-contact">
-    <div class="container">
-      <div class="contact-left">
-        <div class="contact-item">
-          <!-- Icône téléphone -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 5h2l3.6 7.59-1.35 2.44a11.01 11.01 0 005.55 5.55l2.44-1.35L19 19v2a2 2 0 01-2 2c-8.28 0-15-6.72-15-15a2 2 0 012-2z"/>
-          </svg>
-          <span>Tel: <span class="highlight">0658542539</span></span>
-        </div>
-        <div class="contact-item">
-          <span class="icon-mail">✉️</span>
-          <span>Email: <a href="mailto:contact@a-vos-projets.fr" class="link">contact@a-vos-projets.fr</a></span>
-        </div>
-      </div>
-      <div class="contact-right">
-        <a href="https://www.linkedin.com/in/ton-profil" target="_blank" aria-label="LinkedIn" class="link">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="icon-linkedin">
-            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.786-1.75-1.75s.784-1.75 1.75-1.75 1.75.786 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.336-.026-3.056-1.864-3.056-1.865 0-2.151 1.455-2.151 2.958v5.702h-3v-10h2.884v1.367h.041c.401-.759 1.381-1.56 2.845-1.56 3.042 0 3.605 2.003 3.605 4.609v5.584z"/>
-          </svg>
-        </a>
+  <body class="bg-white text-black font-sans">
+    <!-- Barre de contact -->
+    <div class="bg-white text-gray-600 text-sm border-b border-gray-300">
+      <div class="max-w-5xl mx-auto px-4 py-2 flex justify-end space-x-6">
+        <span>📞 06 00 00 00 00</span>
+        <a href="mailto:contact@avosprojets.fr" class="hover:text-yellow-500">✉️ contact@avosprojets.fr</a>
+        <a href="https://www.linkedin.com/in/ton-profil" target="_blank" class="hover:text-yellow-500">🔗 LinkedIn</a>
       </div>
     </div>
-  </div>
 
-  <!-- En-tête -->
-  <header class="header">
-    <div class="container">
-      <div class="logo">
-        <img src="images/logo.png" alt="Logo A Vos Projets" />
+    <!-- En-tête -->
+    <header class="max-w-5xl mx-auto px-4 py-6 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img src="ton-logo.png" alt="Logo À Vos Projets" class="h-12 w-auto mr-3" />
+        <span class="text-xl font-bold text-yellow-500">À Vos Projets</span>
       </div>
+
+      <!-- Menu -->
       <nav>
-        <ul class="menu">
-          <li><a href="#" class="link-menu">Accueil</a></li>
-          <li><a href="#" class="link-menu">Qui sommes nous</a></li>
-          <li><a href="#" class="link-menu">Nos services</a></li>
-          <li><a href="#" class="link-menu">Réalisations</a></li>
-          <li><a href="#" class="link-menu">Vous êtes professionnel</a></li>
-          <li><a href="#" class="link-menu">Contact</a></li>
+        <ul class="flex space-x-6 text-sm font-medium">
+          <li><a href="#accueil" class="hover:underline hover:text-yellow-500">Accueil</a></li>
+          <li><a href="#qui-sommes-nous" class="hover:underline hover:text-yellow-500">Qui sommes-nous</a></li>
+          <li><a href="#services" class="hover:underline hover:text-yellow-500">Nos services</a></li>
+          <li><a href="#realisations" class="hover:underline hover:text-yellow-500">Réalisations</a></li>
+          <li><a href="#pro" class="hover:underline hover:text-yellow-500">Vous êtes professionnel</a></li>
+          <li><a href="#contact" class="hover:underline hover:text-yellow-500">Contact</a></li>
         </ul>
       </nav>
-    </div>
-  </header>
+    </header>
 
-</body>
+    <!-- Section Héros -->
+    <section class="text-center py-20">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Donnez vie à vos projets
+      </h1>
+      <p class="text-lg mb-8 text-gray-700 max-w-2xl mx-auto">
+        Dessinateur en bâtiment à distance — plans, permis de construire, conseils.
+      </p>
+      <a href="#contact" class="inline-block bg-yellow-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition">
+        Me contacter
+      </a>
+    </section>
+  </body>
 </html>
