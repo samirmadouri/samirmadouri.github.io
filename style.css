@@ -5,16 +5,119 @@
   box-sizing: border-box;
 }
 
+/* Corps */
 body {
-  font-family: Arial, sans-serif;
-  background: #fff;
+  font-family: 'Arial', sans-serif;
+  background-color: #fafafa; /* fond un peu moins blanc */
   color: #222;
 }
 
-/* Conteneur flex standard */
-.container-flex {
+/* Conteneur central */
+.container {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 20px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Barre contact */
+.barre-contact {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  color: #444;
+  height: 40px;
+}
+
+.contact-left {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #444;
+  font-weight: 500;
+}
+
+.icon-phone {
+  width: 18px;
+  height: 18px;
+  stroke: #f1c40f; /* jaune */
+  stroke-width: 2;
+  fill: none;
+}
+
+.icon-mail {
+  font-size: 16px;
+  color: #f1c40f;
+}
+
+.highlight {
+  color: #f1c40f;
+  font-weight: 600;
+}
+
+.link {
+  color: #f1c40f;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.link:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.contact-right a {
+  color: #f1c40f;
+  display: flex;
+  align-items: center;
+}
+
+.icon-linkedin {
+  width: 22px;
+  height: 22px;
+}
+
+/* En-tête */
+.header {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0;
+}
+
+/* Logo */
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu li {
+  /* Forcer à une ligne */
+}
+
+.link.nowrap {
+  white-space: nowrap;
+  color: #444;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link.nowrap:hover {
+  color: #f1c40f;
+  text-decoration: underline;
 }
