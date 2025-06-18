@@ -8,28 +8,25 @@
 </head>
 <body>
 
-  <!-- Barre de contact -->
+  <!-- Barre contact -->
   <div class="barre-contact">
-    <div class="container-flex space-between center-items">
-      <div class="flex items-center space-x-6 text-gray">
-        <div class="flex items-center space-x-1">
+    <div class="container">
+      <div class="contact-left">
+        <div class="contact-item">
           <!-- Icône téléphone -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M3 5h2l3.6 7.59-1.35 2.44a11.01 11.01 0 005.55 5.55l2.44-1.35L19 19v2a2 2 0 01-2 2c-8.28 0-15-6.72-15-15a2 2 0 012-2z"/>
           </svg>
-          <span class="text-black">Tel:</span>
-          <span class="text-yellow">0658542539</span>
+          <span>Tel: <span class="highlight">0658542539</span></span>
         </div>
-        <div class="flex items-center space-x-1">
-          <span class="text-yellow">✉️</span>
-          <span class="text-black">Email:</span>
-          <a href="mailto:contact@a-vos-projets.fr" class="text-yellow link-hover">contact@a-vos-projets.fr</a>
+        <div class="contact-item">
+          <span class="icon-mail">✉️</span>
+          <span>Email: <a href="mailto:contact@a-vos-projets.fr" class="highlight link">contact@a-vos-projets.fr</a></span>
         </div>
       </div>
-      <div>
-        <a href="https://www.linkedin.com/in/ton-profil" target="_blank" aria-label="LinkedIn" class="link-hover text-yellow">
-          <!-- LinkedIn -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-linkedin" fill="currentColor" viewBox="0 0 24 24">
+      <div class="contact-right">
+        <a href="https://www.linkedin.com/in/ton-profil" target="_blank" aria-label="LinkedIn" class="link linkedin-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="icon icon-linkedin">
             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.786-1.75-1.75s.784-1.75 1.75-1.75 1.75.786 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.336-.026-3.056-1.864-3.056-1.865 0-2.151 1.455-2.151 2.958v5.702h-3v-10h2.884v1.367h.041c.401-.759 1.381-1.56 2.845-1.56 3.042 0 3.605 2.003 3.605 4.609v5.584z"/>
           </svg>
         </a>
@@ -39,12 +36,12 @@
 
   <!-- En-tête -->
   <header class="header">
-    <div class="container-flex space-between center-items">
-      <div class="flex items-center space-x-4">
-        <img src="images/logo.png" alt="Logo A Vos Projets" class="logo" />
+    <div class="container">
+      <div class="logo">
+        <img src="chemin/vers/ton-logo.png" alt="Logo A Vos Projets" />
       </div>
       <nav>
-        <ul class="menu flex space-x-6 text-gray">
+        <ul class="menu">
           <li><a href="#" class="link nowrap">Accueil</a></li>
           <li><a href="#" class="link nowrap">Qui sommes nous</a></li>
           <li><a href="#" class="link nowrap">Nos services</a></li>
