@@ -126,12 +126,14 @@
           headerInner.classList.remove("py-6");
           logo.classList.add("h-12");
           logo.classList.remove("h-16");
+          header.classList.add("border-b", "border-gray-300"); // Ajoute la bordure
         } else {
           header.style.top = contactBarHeight + "px"; // décale la barre menu sous la barre contact
           headerInner.classList.add("py-6");
           headerInner.classList.remove("py-2");
           logo.classList.add("h-16");
           logo.classList.remove("h-12");
+          header.classList.remove("border-b", "border-gray-300"); // Supprime la bordure
         }
       });
     </script>
