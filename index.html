@@ -7,20 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <script>
-    const header = document.getElementById("main-header");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        header.classList.add("py-2");
-        header.classList.remove("py-6");
-      } else {
-        header.classList.add("py-6");
-        header.classList.remove("py-2");
-      }
-    });
-  </script>
-
   <body class="bg-gray-50 text-black font-sans">
     <!-- Barre de contact -->
     <div class="bg-gray-50 text-sm border-b border-gray-300">
@@ -57,7 +43,7 @@
     <header id="main-header" class="sticky top-0 z-50 bg-gray-50 max-w-6xl mx-auto px-4 py-6 flex justify-between items-end">
       <!-- Logo -->
       <div class="flex items-center">
-        <img src="images/logo.png" alt="Logo À Vos Projets" class="h-16 w-auto mr-3" />
+        <img id="logo" src="images/logo.png" alt="Logo À Vos Projets" class="h-16 w-auto mr-3" />
       </div>
 
       <!-- Menu -->
@@ -123,5 +109,24 @@
         </div>
       </div>
     </footer>
+    <script>
+      const header = document.getElementById("main-header");
+      const logo = document.getElementById("logo");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("py-2");
+          header.classList.remove("py-6");
+          logo.classList.add("h-12");
+          logo.classList.remove("h-16");
+        } else {
+          header.classList.add("py-6");
+          header.classList.remove("py-2");
+          logo.classList.add("h-16");
+          logo.classList.remove("h-12");
+        }
+      });
+    </script>
+
   </body>
 </html>
