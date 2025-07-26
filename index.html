@@ -114,16 +114,20 @@
       </div>
     </footer>
     <script>
+      const header = document.getElementById("main-header");
       const headerInner = document.getElementById("header-inner");
       const logo = document.getElementById("logo");
+      const contactBarHeight = 32; // ou la hauteur exacte de ta barre de contact en px
 
       window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > contactBarHeight) {
+          header.style.top = "0"; // colle la barre de menu en haut
           headerInner.classList.add("py-2");
           headerInner.classList.remove("py-6");
           logo.classList.add("h-12");
           logo.classList.remove("h-16");
         } else {
+          header.style.top = contactBarHeight + "px"; // décale la barre menu sous la barre contact
           headerInner.classList.add("py-6");
           headerInner.classList.remove("py-2");
           logo.classList.add("h-16");
