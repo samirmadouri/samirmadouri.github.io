@@ -81,8 +81,48 @@
           </p>
           <!-- Ton formulaire ici -->
           <form class="space-y-4">
-            <!-- Champs de formulaire -->
-            blabla
+            <!-- Nom -->
+            <div>
+              <label for="nom" class="block text-sm font-medium text-gray-700">Nom</label>
+              <input type="text" id="nom" name="nom" required
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-[#FCDD42] focus:border-[#FCDD42]" />
+            </div>
+
+            <!-- Prénom -->
+            <div>
+              <label for="prenom" class="block text-sm font-medium text-gray-700">Prénom</label>
+              <input type="text" id="prenom" name="prenom" required
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-[#FCDD42] focus:border-[#FCDD42]" />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" id="email" name="email" required
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-[#FCDD42] focus:border-[#FCDD42]" />
+            </div>
+
+            <!-- Téléphone -->
+            <div>
+              <label for="telephone" class="block text-sm font-medium text-gray-700">Téléphone</label>
+              <input type="tel" id="telephone" name="telephone"
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-[#FCDD42] focus:border-[#FCDD42]" />
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea id="message" name="message" rows="5" required
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-[#FCDD42] focus:border-[#FCDD42]"></textarea>
+            </div>
+
+            <!-- Bouton -->
+            <div>
+              <button type="submit"
+                class="bg-[#FCDD42] text-black font-semibold py-2 px-6 rounded-md shadow hover:shadow-lg hover:opacity-90 transition">
+                Envoyer
+              </button>
+            </div>
           </form>
         </div>
 
