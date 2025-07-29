@@ -100,6 +100,7 @@
             <div>
               <label for="email" class="block text-sm font-medium text-gray-700">Email <span class="text-red-500">*</span></label>
               <input type="email" id="email" name="email" required aria-required="true"
+                oninvalid="this.classList.add('border-red-500')" oninput="this.classList.remove('border-red-500')"
                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-[#FCDD42] focus:border-[#FCDD42]" />
             </div>
 
@@ -112,8 +113,9 @@
 
             <!-- Message -->
             <div>
-              <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-              <textarea id="message" name="message" rows="5" required
+              <label for="message" class="block text-sm font-medium text-gray-700">Message <span class="text-red-500">*</span></label>
+              <textarea id="message" name="message" rows="5" required aria-required="true"
+                oninvalid="this.classList.add('border-red-500')" oninput="this.classList.remove('border-red-500')"
                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-[#FCDD42] focus:border-[#FCDD42]"></textarea>
             </div>
 
