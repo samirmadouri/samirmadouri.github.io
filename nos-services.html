@@ -81,13 +81,22 @@
 
         <!-- 3 carrés cliquables -->
         <div class="grid grid-cols-3 gap-4">
-          <a href="#permis" class="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:bg-gray-100 transition">
-            <span class="text-center">Avant-projet / Esquisse</span>
+          
+          <a href="#permis" class="relative group rounded-lg overflow-hidden shadow-md cursor-pointer">
+            <!-- Image de fond -->
+            <img src="ton-image.jpg" alt="Avant-projet" class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" />
+
+            <!-- Bande blanche semi-transparente avec texte centré -->
+            <div class="absolute bottom-0 w-full bg-white bg-opacity-70 text-black text-center py-2">
+              Avant-projet
+            </div>
           </a>
+
           <a href="#declaration" class="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:bg-gray-100 transition">
             <span class="text-center">Déclaration préalable</span>
           </a>
-          <a href="#avant-projet" class="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:bg-gray-100 transition">
+          
+          <a href="#permis" class="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:bg-gray-100 transition">
             <span class="text-center">Permis de construire</span>
           </a>
         </div>
