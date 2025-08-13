@@ -129,34 +129,56 @@
       </div>
 
       <!-- bloc pour les professionnels -->
-      <div class="bg-gray-100 rounded-lg shadow-lg max-w-6xl mx-auto p-6 mt-10">
+      <div class="bg-gray-100 rounded-lg shadow-lg max-w-6xl mx-auto p-6">
+    
+        <!-- titre en haut-->
+        <h2 class="inline-block border-b-2 border-[#FCDD42] text-xl md:text-2xl font-semibold mb-6 text-black"><span class="text-[#FCDD42]">P</span>OUR LES PROFESSIONNELS</h2>
         
-        <div class="flex items-center justify-between mb-6">
-  
-          <!-- Titre à gauche -->
-          <h2 class="inline-block border-b-2 border-[#FCDD42] text-xl md:text-2xl font-semibold text-black">
-            <span class="text-[#FCDD42]">P</span>OUR LES PROFESSIONNELS
-          </h2>
+        <span class="flex items-center italic text-sm text-gray-600 mb-2">
+          <!-- Icône info -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
+          </svg>
+          Cliquez sur le service pour en savoir plus
+        </span>
 
-          <!-- Texte explicatif aligné à droite -->
-          <span class="flex items-center italic text-sm text-gray-600">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
-            </svg>
-            Cliquez sur le service pour en savoir plus
-          </span>
-        </div>
-        
         <!-- 3 carrés cliquables -->
         <div class="grid grid-cols-3 gap-4">
-          <a href="#permis" class="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:bg-gray-100 transition">
-            <span class="text-center">Devantures et enseigne</span>
+          
+          <a href="#devanture-enseigne" class="relative block group rounded-lg overflow-hidden cursor-pointer">
+            <!-- Image de fond -->
+            <img src="images/avp_esquisse.jpg" alt="Avant-projet" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
+
+            <!-- rectangle -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="bg-gray-50 bg-opacity-80 text-gray-800 text-lg font-semibold px-4 py-2 rounded-md transition-transform duration-300 group-hover:scale-[1.15]">
+                DEVANTURE / ENSEIGNE
+              </span>
+            </div>
           </a>
-          <a href="#declaration" class="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:bg-gray-100 transition">
-            <span class="text-center">Plan PMR</span>
+
+          <a href="#pmr" class="relative block group rounded-lg overflow-hidden shadow-md cursor-pointer">
+            <!-- Image de fond -->
+            <img src="images/declaration_prealable.jpg" alt="Avant-projet" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
+
+            <!-- rectangle -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="bg-gray-50 bg-opacity-80 text-gray-800 text-lg font-semibold px-4 py-2 rounded-md transition-transform duration-300 group-hover:scale-[1.15]">
+                PLAN PMR
+              </span>
+            </div>
           </a>
-          <a href="#avant-projet" class="bg-white shadow-md rounded-lg p-4 flex items-center justify-center hover:bg-gray-100 transition">
-            <span class="text-center">Plan de securite incendie</span>
+          
+          <a href="#incendie" class="relative block group rounded-lg overflow-hidden shadow-md cursor-pointer">
+            <!-- Image de fond -->
+            <img src="images/permis_de_construire.jpg" alt="Avant-projet" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
+
+            <!-- rectangle -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="bg-gray-50 bg-opacity-80 text-gray-800 text-lg font-semibold px-4 py-2 rounded-md transition-transform duration-300 group-hover:scale-[1.15]">
+                PLAN DE SÉCURITÉ INCENDIE
+              </span>
+            </div>
           </a>
         </div>
       </div>
