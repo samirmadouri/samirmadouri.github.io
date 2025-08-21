@@ -358,6 +358,35 @@
           header.classList.remove("border-b", "border-gray-300"); // Supprime la bordure
         }
       });
+
+      // Effet de surbrillance du formulaire
+      document.addEventListener('DOMContentLoaded', function() {
+        const contactLinks = document.querySelectorAll('a[href="#formulaire"]');
+        const formulaire = document.querySelector('.bg-gray-100.rounded-lg.shadow-lg');
+        
+        contactLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            // Petit délai pour laisser le scroll se faire
+            setTimeout(() => {
+              // Ajouter l'effet de surbrillance
+              formulaire.classList.add('ring-4', 'ring-[#FCDD42]', 'ring-opacity-75');
+              formulaire.style.transform = 'scale(1.02)';
+              formulaire.style.transition = 'all 0.3s ease';
+              
+              // Retirer l'effet après 3 secondes
+              setTimeout(() => {
+                formulaire.classList.remove('ring-4', 'ring-[#FCDD42]', 'ring-opacity-75');
+                formulaire.style.transform = 'scale(1)';
+                
+                // Nettoyer après la transition
+                setTimeout(() => {
+                  formulaire.style.transition = '';
+                }, 300);
+              }, 3000);
+            }, 500);
+          });
+        });
+      });
     </script>
 
 
