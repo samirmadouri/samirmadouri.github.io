@@ -375,9 +375,9 @@
           link.addEventListener('click', function(e) {
             // Petit délai pour laisser le scroll se faire
             setTimeout(() => {
-              // Ajouter le contour rouge fin
-              formulaire.classList.add('ring-2', 'ring-red-500', 'ring-opacity-75');
-              formulaire.style.transition = 'all 0.3s ease';
+              // Ajouter l'effet d'ombre rouge
+              formulaire.style.boxShadow = '0 0 20px rgba(239, 68, 68, 0.6)';
+              formulaire.style.transition = 'all 0.5s ease';
               
               // Premier zoom
               formulaire.style.transform = 'scale(1.05)';
@@ -394,18 +394,18 @@
                     // Deuxième dézoom final
                     formulaire.style.transform = 'scale(1)';
                     
-                    // Retirer le contour après l'animation
+                    // Retirer l'ombre après l'animation
                     setTimeout(() => {
-                      formulaire.classList.remove('ring-2', 'ring-red-500');
+                      formulaire.style.boxShadow = '';
                       
                       // Nettoyer après la transition
                       setTimeout(() => {
                         formulaire.style.transition = '';
-                      }, 300);
-                    }, 500);
-                  }, 300);
-                }, 300);
-              }, 300);
+                      }, 500);
+                    }, 800);
+                  }, 500);
+                }, 500);
+              }, 500);
             }, 500);
           });
         });
