@@ -375,21 +375,37 @@
           link.addEventListener('click', function(e) {
             // Petit délai pour laisser le scroll se faire
             setTimeout(() => {
-              // Ajouter l'effet de surbrillance
-              formulaire.classList.add('ring-4', 'ring-[#FCDD42]', 'ring-opacity-75');
-              formulaire.style.transform = 'scale(1.02)';
+              // Ajouter le contour rouge fin
+              formulaire.classList.add('ring-2', 'ring-red-500', 'ring-opacity-75');
               formulaire.style.transition = 'all 0.3s ease';
               
-              // Retirer l'effet après 3 secondes
+              // Premier zoom
+              formulaire.style.transform = 'scale(1.05)';
+              
               setTimeout(() => {
-                formulaire.classList.remove('ring-4', 'ring-[#FCDD42]', 'ring-opacity-75');
+                // Premier dézoom
                 formulaire.style.transform = 'scale(1)';
                 
-                // Nettoyer après la transition
                 setTimeout(() => {
-                  formulaire.style.transition = '';
+                  // Deuxième zoom
+                  formulaire.style.transform = 'scale(1.05)';
+                  
+                  setTimeout(() => {
+                    // Deuxième dézoom final
+                    formulaire.style.transform = 'scale(1)';
+                    
+                    // Retirer le contour après l'animation
+                    setTimeout(() => {
+                      formulaire.classList.remove('ring-2', 'ring-red-500');
+                      
+                      // Nettoyer après la transition
+                      setTimeout(() => {
+                        formulaire.style.transition = '';
+                      }, 300);
+                    }, 500);
+                  }, 300);
                 }, 300);
-              }, 3000);
+              }, 300);
             }, 500);
           });
         });
