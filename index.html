@@ -36,6 +36,16 @@
         
         /* Animation dégradé qui traverse de gauche à droite */
         .text-gradient-mixed {
+            color: #1f2937; /* Couleur de base noire */
+            position: relative;
+            display: inline-block;
+        }
+
+        .text-gradient-mixed::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
             background: linear-gradient(90deg, 
                 transparent 0%, 
                 transparent 30%, 
@@ -148,8 +158,8 @@
                 <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-8 leading-tight hero-shadow">
                     Donnez vie
                     <br>
-                    <span class="text-gradient-mixed animate-pulse-gentle relative">
-                        <span class="yellow-letter">A V</span><span class="text-gray-900">os</span> <span class="yellow-letter">P</span><span class="text-gray-900">rojets</span>
+                    <span class="text-gradient-mixed animate-pulse-gentle relative" data-text="À Vos Projets">
+                        <span class="yellow-letter">A V</span>os <span class="yellow-letter">P</span>rojets
                         <svg class="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 200 12" fill="none">
                             <path d="M2 10C50 2 150 2 198 10" stroke="#FCDD42" stroke-width="3" stroke-linecap="round"/>
                         </svg>
