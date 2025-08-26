@@ -34,22 +34,39 @@
             animation: pulse 3s ease-in-out infinite;
         }
         
+        /* Animation dégradé qui traverse de gauche à droite */
         .text-gradient-mixed {
-            background: linear-gradient(135deg, #FCDD42 0%, #f59e0b 20%, #1f2937 30%, #1f2937 70%, #FCDD42 80%, #f59e0b 100%);
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                transparent 30%, 
+                #FCDD42 40%, 
+                #f59e0b 50%, 
+                #FCDD42 60%, 
+                transparent 70%, 
+                transparent 100%);
+            background-size: 300% 100%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            background-size: 200% 200%;
-            animation: gradientShift 4s ease-in-out infinite;
+            animation: gradientSlide 3s ease-in-out infinite;
         }
     
         @keyframes gradientShift {
             0%, 100% {
-                background-position: 0% 50%;
+                background-position: -100% 0;
             }
             50% {
-                background-position: 100% 50%;
+                background-position: 100% 0;
             }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        /* Lettres fixes en jaune */
+        .yellow-letter {
+            color: #FCDD42 !important;
+            -webkit-text-fill-color: #FCDD42 !important;
         }
         
         .hero-shadow {
@@ -132,7 +149,7 @@
                     Donnez vie
                     <br>
                     <span class="text-gradient-mixed animate-pulse-gentle relative">
-                        <span class="text-[#FCDD42]">A</span> <span class="text-gray-900">Vos</span> <span class="text-[#FCDD42]">P</span><span class="text-gray-900">rojets</span>
+                        <span class="yellow-letter">A V</span><span class="text-gray-900">os</span> <span class="yellow-letter">P</span><span class="text-gray-900">rojets</span>
                         <svg class="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 200 12" fill="none">
                             <path d="M2 10C50 2 150 2 198 10" stroke="#FCDD42" stroke-width="3" stroke-linecap="round"/>
                         </svg>
