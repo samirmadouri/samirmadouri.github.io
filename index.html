@@ -41,8 +41,13 @@
             display: inline-block;
         }
 
-        .text-gradient-mixed::before {
-            content: attr(data-text);
+        .initial-letter {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .initial-letter::before {
+            content: attr(data-letter);
             position: absolute;
             top: 0;
             left: 0;
@@ -58,7 +63,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientSlide 5s ease-in-out infinite;
+            animation: gradientSlideInitials 5s ease-in-out forwards;
         }
     
         @keyframes gradientSlide {
@@ -73,11 +78,21 @@
             }
         }
 
-        /* Lettres fixes en jaune */
-        .yellow-letter {
-            color: #FCDD42 !important;
-            position: relative;
-            z-index: 2;
+        /* État final : lettres jaunes après animation */
+        .initial-letter {
+            animation: finalYellow 5s ease-in-out forwards;
+        }
+
+        @keyframes finalYellow {
+            0% {
+                color: #1f2937;
+            }
+            99% {
+                color: #1f2937;
+            }
+            100% {
+                color: #FCDD42;
+            }
         }
         
         .hero-shadow {
@@ -159,8 +174,8 @@
                 <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-8 leading-tight hero-shadow">
                     Donnez vie
                     <br>
-                    <span class="italic text-gradient-mixed animate-pulse-gentle relative" data-text="A Vos Projets">
-                        <span class="yellow-letter">A V</span>os <span class="yellow-letter">P</span>rojets                    
+                    <span class="italic text-gradient-mixed animate-pulse-gentle relative">
+                        <span class="initial-letter" data-letter="A">A</span> <span class="initial-letter" data-letter="V">V</span>os <span class="initial-letter" data-letter="P">P</span>rojets                    
                         <svg class="absolute -bottom-6 left-0 w-full h-3" viewBox="0 0 200 12" fill="none">
                             <path d="M2 10C50 2 150 2 198 10" stroke="#FCDD42" stroke-width="3" stroke-linecap="round"/>
                         </svg>
