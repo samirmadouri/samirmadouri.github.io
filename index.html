@@ -51,6 +51,7 @@
             position: absolute;
             top: 0;
             left: 0;
+            font-style: italic;
             background: linear-gradient(90deg, 
                 transparent 0%, 
                 transparent 30%, 
@@ -70,7 +71,7 @@
             0% {
                 background-position: -100% 0;
             }
-            50% {
+            70% {
                 background-position: 100% 0;
             }
             100% {
@@ -83,13 +84,14 @@
             position: absolute;
             top: 0;
             left: 0;
+            font-style: italic;
             color: #FCDD42;
             opacity: 0;
             animation: showYellow 5s ease-in-out forwards;
         }
         
         @keyframes showYellow {
-            0%, 99% {
+            0%, 85% {
                 opacity: 0;
             }
             100% {
@@ -177,7 +179,7 @@
                     Donnez vie
                     <br>
                     <span class="italic text-gradient-mixed animate-pulse-gentle relative">
-                        <span class="italic initial-letter" data-letter="A">A</span> <span class="italic initial-letter" data-letter="V">V</span>os <span class="italic initial-letter" data-letter="P">P</span>rojets                    
+                        <span class="initial-letter" data-letter="A">A</span> <span class="initial-letter" data-letter="V">V</span>os <span class="initial-letter" data-letter="P">P</span>rojets                    
                         <svg class="absolute -bottom-6 left-0 w-full h-3" viewBox="0 0 200 12" fill="none">
                             <path d="M2 10C50 2 150 2 198 10" stroke="#FCDD42" stroke-width="3" stroke-linecap="round"/>
                         </svg>
