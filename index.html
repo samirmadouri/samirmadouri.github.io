@@ -78,20 +78,22 @@
             }
         }
 
-        /* État final : lettres jaunes après animation */
-        .initial-letter {
-            animation: finalYellow 5s ease-in-out forwards;
+        .initial-letter::after {
+            content: attr(data-letter);
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #FCDD42;
+            opacity: 0;
+            animation: showYellow 5s ease-in-out forwards;
         }
-
-        @keyframes finalYellow {
-            0% {
-                color: #1f2937;
-            }
-            99% {
-                color: #1f2937;
+        
+        @keyframes showYellow {
+            0%, 99% {
+                opacity: 0;
             }
             100% {
-                color: #FCDD42;
+                opacity: 1;
             }
         }
         
@@ -175,7 +177,7 @@
                     Donnez vie
                     <br>
                     <span class="italic text-gradient-mixed animate-pulse-gentle relative">
-                        <span class="initial-letter" data-letter="A">A</span> <span class="initial-letter" data-letter="V">V</span>os <span class="initial-letter" data-letter="P">P</span>rojets                    
+                        <span class="italic initial-letter" data-letter="A">A</span> <span class="italic initial-letter" data-letter="V">V</span>os <span class="italic initial-letter" data-letter="P">P</span>rojets                    
                         <svg class="absolute -bottom-6 left-0 w-full h-3" viewBox="0 0 200 12" fill="none">
                             <path d="M2 10C50 2 150 2 198 10" stroke="#FCDD42" stroke-width="3" stroke-linecap="round"/>
                         </svg>
