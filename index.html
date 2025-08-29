@@ -49,6 +49,7 @@
             font-size: inherit;
             font-family: inherit;
             line-height: inherit;
+            color: black; /* Texte noir de base */
         }
         
         .initial-letter::before {
@@ -56,13 +57,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            font-style: italic;
-            font-weight: 900;
-            font-size: inherit;
-            font-family: inherit;
-            line-height: inherit;
+            font: inherit;
             background: linear-gradient(90deg, 
                 transparent 0%, 
                 transparent 30%, 
@@ -95,11 +90,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            font-style: italic;
-            font-weight: inherit;
-            font-size: inherit;
-            font-family: inherit;
-            line-height: inherit;
+            font: inherit;
             color: #FCDD42;
             opacity: 0;
             animation: showYellow 5s ease-in-out forwards;
