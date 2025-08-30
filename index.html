@@ -53,24 +53,25 @@
             top: 0;
             left: 0;
             font: inherit;
-            background: linear-gradient(90deg, 
-                transparent 0%, 
-                transparent 30%, 
-                #FCDD42 40%, 
+            background: linear-gradient(
+                90deg, 
+                #1f2937 0%,       /* Commence par noir */
+                #1f2937 30%,      /* Noir jusqu’à 30% */
+                #FCDD42 40%,      /* Début du jaune */
                 #f59e0b 50%, 
                 #FCDD42 60%, 
-                transparent 70%, 
-                transparent 100%);
+                #1f2937 70%,      /* Retour au noir */
+                #1f2937 100%
+            );
             background-size: 300% 100%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             animation: gradientSlideInitials 5s ease-in-out forwards;
-            animation-delay: 0.5s; /* délai avant le début */
         }
     
         @keyframes gradientSlideInitials {
-            0% { background-position: -100% 0; }
+            0% { background-position: 0% 0; }
             100% { background-position: 200% 0; }
         }
 
