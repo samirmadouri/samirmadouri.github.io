@@ -179,41 +179,30 @@
                   <span>
                     <svg viewBox="0 0 1200 250" xmlns="http://www.w3.org/2000/svg" class="inline-block w-full" style="height:1em; vertical-align:middle;">
                       <defs>
-                        <!-- Dégradé animé -->
-                        <linearGradient id="grad" x1="0%" y1="0%" x2="300%" y2="0%">
+                        <!-- Dégradé qui glisse -->
+                        <linearGradient id="grad-slide" x1="0%" y1="0%" x2="300%" y2="0%">
                           <stop offset="0%" stop-color="transparent"/>
                           <stop offset="40%" stop-color="#FCDD42"/>
                           <stop offset="50%" stop-color="#f59e0b"/>
                           <stop offset="60%" stop-color="#FCDD42"/>
                           <stop offset="100%" stop-color="transparent"/>
+                          <animate attributeName="x1" values="0%;100%" dur="5s" repeatCount="1" fill="freeze"/>
+                          <animate attributeName="x2" values="300%;400%" dur="5s" repeatCount="1" fill="freeze"/>
                         </linearGradient>
                       </defs>
-
+                
                       <!-- Texte -->
                       <text x="0" y="140" font-size="140" font-weight="bold" font-style="italic" font-family="Arial, sans-serif">
-                        <!-- Initiales animées -->
-                        <tspan fill="url(#grad)">
-                          <animate attributeName="fill" values="transparent;url(#grad)" dur="5s" fill="freeze"/>
-                          À
-                        </tspan>
-                        <tspan fill="url(#grad)">
-                          <animate attributeName="fill" values="transparent;url(#grad)" dur="5s" fill="freeze"/>
-                          V
-                        </tspan>
-                
-                        <!-- Texte noir derrière -->
+                        <tspan fill="url(#grad-slide)">À</tspan>
+                        <tspan fill="url(#grad-slide)">V</tspan>
                         <tspan fill="black">os </tspan>
-                
-                        <tspan fill="url(#grad)">
-                          <animate attributeName="fill" values="transparent;url(#grad)" dur="5s" fill="freeze"/>
-                          P
-                        </tspan>
-                
+                        <tspan fill="url(#grad-slide)">P</tspan>
                         <tspan fill="black">rojets</tspan>
                       </text>
                     </svg>
                   </span>
                 </h1>
+
 
             </div>
 
