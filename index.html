@@ -74,15 +74,9 @@
         }
     
         @keyframes gradientSlideInitials {
-            0% {
-                background-position: -100% 0;
-            }
-            70% {
-                background-position: 100% 0;
-            }
-            100% {
-                background-position: 200% 0;
-            }
+            0% { background-position: -100% 0; }
+            70% { background-position: 100% 0; }
+            100% { background-position: 200% 0; }
         }
 
         .initial-letter::after {
@@ -97,18 +91,62 @@
         }
         
         @keyframes showYellow {
-            0%, 85% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
+            0%, 85% { opacity: 0; }
+            100% { opacity: 1; }
         }
         
         .hero-shadow {
             text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+        .site-title {
+          font-size: 3rem;        /* adapte selon ton design */
+          font-weight: bold;
+          font-style: italic;
+          color: white;           /* couleur par défaut du reste du texte */
+        }
+
+        .initial-wrap {
+          position: relative;
+          display: inline-block;
+        }
+
+        .initial-wrap span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font: inherit;  /* garde la même police / taille / style */
+        }
+
+        .initial-base {
+          color: black;          /* couche noire de départ */
+          position: relative;    /* reste en fond */
+        }
+
+        .initial-gradient {
+          background: linear-gradient(90deg,
+              transparent 0%,
+              transparent 30%,
+              #FCDD42 40%,
+              #f59e0b 50%,
+              #FCDD42 60%,
+              transparent 70%,
+              transparent 100%);
+          background-size: 300% 100%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: gradientSlideInitials 5s ease-in-out forwards;
+        }
+
+        .initial-final {
+          color: #FCDD42;        /* jaune final */
+          opacity: 0;
+          animation: showYellow 5s ease-in-out forwards;
+        }
+      
     </style>
+    
   </head>
 
   <body class="bg-gray-50 text-black font-sans">
@@ -191,8 +229,23 @@
                         </svg>
                     </span>
                 </h1>
+
+                <h1 class="site-title">
+                  <span class="initial-wrap">
+                    <span class="initial-base">À</span>
+                    <span class="initial-gradient">À</span>
+                    <span class="initial-final">À</span>
+                  </span>
+                  <span class="rest"> Vos </span>
+                  <span class="initial-wrap">
+                    <span class="initial-base">P</span>
+                    <span class="initial-gradient">P</span>
+                    <span class="initial-final">P</span>
+                  </span>
+                  <span class="rest">rojets</span>
+                </h1>
             </div>
-        
+
             <div class="animate-fadeInUp" style="animation-delay: 0.2s; opacity: 0;">
                 <p class="pt-10 text-gray-800 text-xl md:text-2xl mb-4 font-medium max-w-3xl mx-auto">
                     Votre expert du dessin en bâtiment à distance
