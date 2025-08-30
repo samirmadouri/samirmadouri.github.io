@@ -50,6 +50,10 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+
+      /* HACK pour corriger les bords manquants en italic */
+      -webkit-text-stroke: 0.5px transparent;
+
       animation: gradientSlideInitials 5s ease-in-out forwards;
     }
 
