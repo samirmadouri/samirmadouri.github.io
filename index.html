@@ -173,36 +173,16 @@
     
         <div class="max-w-5xl mx-auto text-center px-4 relative z-10">
             <div class="animate-fadeInUp">
-                <h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight hero-shadow">
-                  Donnez vie
-                  <br>
-                  <span>
-                    <svg viewBox="0 0 1200 250" xmlns="http://www.w3.org/2000/svg" class="inline-block w-full" style="height:1em; vertical-align:middle;">
-                      <defs>
-                        <!-- Dégradé qui glisse -->
-                        <linearGradient id="grad-slide" x1="0%" y1="0%" x2="300%" y2="0%">
-                          <stop offset="0%" stop-color="transparent"/>
-                          <stop offset="40%" stop-color="#FCDD42"/>
-                          <stop offset="50%" stop-color="#f59e0b"/>
-                          <stop offset="60%" stop-color="#FCDD42"/>
-                          <stop offset="100%" stop-color="transparent"/>
-                          <animate attributeName="x1" values="0%;100%" dur="5s" repeatCount="1" fill="freeze"/>
-                          <animate attributeName="x2" values="300%;400%" dur="5s" repeatCount="1" fill="freeze"/>
-                        </linearGradient>
-                      </defs>
-                
-                      <!-- Texte -->
-                      <text x="0" y="140" font-size="140" font-weight="bold" font-style="italic" font-family="Arial, sans-serif">
-                        <tspan fill="url(#grad-slide)">À</tspan>
-                        <tspan fill="url(#grad-slide)">V</tspan>
-                        <tspan fill="black">os </tspan>
-                        <tspan fill="url(#grad-slide)">P</tspan>
-                        <tspan fill="black">rojets</tspan>
-                      </text>
-                    </svg>
-                  </span>
+                <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-8 leading-tight hero-shadow">
+                    Donnez vie
+                    <br>
+                    <span class="text-gradient-mixed animate-pulse-gentle relative">
+                        <span class="initial-letter" data-letter="A">A</span> <span class="initial-letter" data-letter="V">V</span>os <span class="initial-letter" data-letter="P">P</span>rojets
+                        <svg class="absolute -bottom-8 left-0 w-full h-3" viewBox="0 0 200 12" fill="none">
+                            <path d="M2 10C50 2 150 2 198 10" stroke="#FCDD42" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </span>
                 </h1>
-
 
             </div>
 
