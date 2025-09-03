@@ -591,6 +591,20 @@
           </div>
   
       </div>
+      
+      <!-- Modal de la galerie -->
+      <div id="gallery-modal" class="modal">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h3 class="modal-title" id="gallery-title">Galerie du projet</h3>
+                  <button class="close-btn" onclick="closeGallery()">&times;</button>
+              </div>
+              <div class="gallery-container">
+                  <img id="gallery-main-image" class="gallery-main-image" src="" alt="Image principale">
+                  <div id="gallery-thumbnails" class="gallery-thumbnails"></div>
+              </div>
+          </div>
+      </div>
     </section>
                 
       <!-- Pied de page -->
@@ -690,17 +704,93 @@
         }
       });
 
-      // Galerie photo
-        const galleryData = {
-          'villa-marseille': [
-            'images/architecte.jpg',
-            'images/entreprise.jpg',
-            'images/devanture.jpg',
-            'images/pmr.jpg',
-            'images/avp_esquisse.jpg'
-          ],
-          // ... autres projets
-        };
+      // Données de la galerie
+      const galleryData = {
+          'villa-marseille': {
+              title: 'Villa Moderne - Marseille',
+              images: [
+                  'images/pmr.jpg,
+                  'images/architecte.jpg,
+                  'images/avp_esquisse.jpg',
+                  'images/entreprise.jpg,
+                  'images/devanture.jpg'
+              ]
+          },
+          // Vous pouvez ajouter d'autres projets ici
+          
+      };
+      
+      // Fonction pour ouvrir la galerie
+      function openGallery(projectId) {
+          const project = galleryData[projectId];
+          if (!project) {
+              console.error('Projet non trouvé:', projectId);
+              return;
+          }
+      
+          const modal = document.getElementById('gallery-modal');
+          const title = document.getElementById('gallery-title');
+          const mainImage = document.getElementById('gallery-main-image');
+          const thumbnailsContainer = document.getElementById('gallery-thumbnails');
+      
+          // Définir le titre
+          title.textContent = project.title;
+      
+          // Définir l'image principale (première image)
+          mainImage.src = project.images[0];
+          mainImage.alt = project.title;
+      
+          // Générer les miniatures
+          thumbnailsContainer.innerHTML = '';
+          project.images.forEach((imageSrc, index) => {
+              const thumbnail = document.createElement('img');
+              thumbnail.src = imageSrc;
+              thumbnail.alt = `${project.title} - Image ${index + 1}`;
+              thumbnail.className = 'thumbnail';
+              if (index === 0) thumbnail.classList.add('active');
+              
+              thumbnail.onclick = () => changeMainImage(imageSrc, thumbnail);
+              thumbnailsContainer.appendChild(thumbnail);
+          });
+      
+          // Afficher la modal
+          modal.style.display = 'block';
+          document.body.style.overflow = 'hidden'; // Empêcher le scroll
+      }
+      
+      // Fonction pour changer l'image principale
+      function changeMainImage(imageSrc, clickedThumbnail) {
+          const mainImage = document.getElementById('gallery-main-image');
+          mainImage.src = imageSrc;
+      
+          // Mettre à jour les classes active
+          document.querySelectorAll('.thumbnail').forEach(thumb => {
+              thumb.classList.remove('active');
+          });
+          clickedThumbnail.classList.add('active');
+      }
+      
+      // Fonction pour fermer la galerie
+      function closeGallery() {
+          const modal = document.getElementById('gallery-modal');
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto'; // Rétablir le scroll
+      }
+      
+      // Fermer la galerie en cliquant en dehors
+      window.onclick = function(event) {
+          const modal = document.getElementById('gallery-modal');
+          if (event.target === modal) {
+              closeGallery();
+          }
+      }
+      
+      // Fermer avec la touche Échap
+      document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+              closeGallery();
+          }
+      });
       
       // Animation des cartes au scroll
         const observerOptions = {
