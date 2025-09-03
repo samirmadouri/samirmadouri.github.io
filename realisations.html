@@ -50,6 +50,8 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column; /* on passe la carte entière en flex */
         }
 
         .project-card:hover {
@@ -63,6 +65,7 @@
             position: relative;
             overflow: hidden;
             cursor: pointer;
+            flex-shrink: 0; /* l’image ne rétrécit pas */
         }
 
         .project-image img {
@@ -99,11 +102,10 @@
         }
 
         .project-content {
-            padding: 25px;
+            flex: 1; /* occupe tout l’espace restant de la carte */
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* répartit le haut et le bas */
-            height: 100%;
+            padding: 25px;
         }
 
         .project-title {
@@ -124,10 +126,10 @@
         }
 
         .project-description {
+            flex-grow: 1; /* pousse les détails vers le bas */
             color: #666;
             margin-bottom: 15px;
             line-height: 1.6;
-            flex-grow: 1; /* pousse le bloc "details" vers le bas */
         }
 
         .project-details {
