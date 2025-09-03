@@ -761,6 +761,19 @@
           header.classList.remove("border-b", "border-gray-300"); // Supprime la bordure
         }
       });
+
+      // Galerie photo
+      const galleryData = {
+        'villa-marseille': [
+          'images/architecte.jpg',
+          'images/entreprise.jpg',
+          'images/devanture.jpg',
+          'images/pmr.jpg',
+          'images/avp_esquisse.jpg'
+        ],
+        // ... autres projets
+      };
+      
       // Animation des cartes au scroll
         const observerOptions = {
             threshold: 0.1,
