@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Port       = 465;
 
         // Destinataire
-        $mail->setFrom('ton-adresse-mail@ton-domaine.com', 'À Vos Projets');
+        $mail->setFrom('contact@a-vos-projets.fr', 'À Vos Projets');
         $mail->addAddress('contact@a-vos-projets.fr', 'À Vos Projets');
 
         // Contenu
