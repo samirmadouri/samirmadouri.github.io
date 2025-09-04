@@ -18,10 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->isSMTP();
         $mail->Host       = 'smtp.ionos.fr';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'ton-adresse-mail@ton-domaine.com';
-        $mail->Password   = 'ton-mot-de-passe-mail';
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = 587;
+        $mail->Username   = 'contact@a-vos-projets.fr';
+        $mail->Password   = 'Melina92';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
 
         // Destinataire
         $mail->setFrom('ton-adresse-mail@ton-domaine.com', 'À Vos Projets');
