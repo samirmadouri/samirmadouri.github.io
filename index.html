@@ -139,7 +139,18 @@
           <div class="flex items-center">
             <img id="logo" src="images/logo.png" alt="Logo À Vos Projets" class="h-16 w-auto mr-3 transition-all duration-300" />
           </div>
-
+      
+          <!-- Bouton hamburger (mobile uniquement) -->
+          <div class="md:hidden">
+            <button id="menu-btn" class="p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+                   viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </button>
+          </div>
+          
           <!-- Menu -->
           <nav>
             <ul class="flex items-center space-x-2 text-gray-800 font-semibold">
@@ -547,7 +558,13 @@
       const headerInner = document.getElementById("header-inner");
       const logo = document.getElementById("logo");
       const contactBarHeight = 32; // ou la hauteur exacte de ta barre de contact en px
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
 
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+      
       window.addEventListener("scroll", () => {
         if (window.scrollY > contactBarHeight) {
           header.style.top = "0"; // colle la barre de menu en haut
