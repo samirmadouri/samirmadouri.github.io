@@ -8,6 +8,35 @@
   </head>
 
   <body class="bg-gray-50 text-black font-sans">
+    
+    <!-- Popup de confirmation -->
+    <div id="popup-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[100] hidden items-center justify-center">
+      <div class="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full mx-4 transform scale-95 transition-all duration-300" id="popup-content">
+        <div class="text-center">
+          <!-- Icône de succès -->
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Message envoyé !</h3>
+          <p id="popup-message" class="text-gray-600 mb-6">Votre message a été envoyé avec succès. Nous vous contacterons dans les 24h.</p>
+          
+          <button onclick="closePopup()" class="bg-[#FCDD42] text-black font-semibold py-2 px-6 rounded-md shadow hover:shadow-lg hover:opacity-90 transition">
+            Fermer
+          </button>
+        </div>
+        
+        <!-- Bouton X en haut à droite -->
+        <button onclick="closePopup()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
     <!-- Barre de contact -->
     <div class="bg-gray-50 text-sm border-b border-gray-300 z-50 relative">
       <div class="max-w-6xl mx-auto px-4 py-2 flex justify-between items-center">
@@ -91,7 +120,7 @@
             Remplissez ce formulaire pour nous poser vos questions ou demander un devis, nous vous contacterons dans les 24H.
           </p>
           <!-- Ton formulaire ici -->
-          <form action="contact.php" method="post" class="space-y-4">
+          <form id="contact-form" class="space-y-4">
             <!-- Nom -->
             <div>
               <label for="nom" class="block text-sm font-medium text-gray-700">Nom <span class="text-red-500">*</span></label>
@@ -125,9 +154,16 @@
 
             <!-- Bouton -->
             <div>
-              <button type="submit"
-                class="bg-[#FCDD42] text-black font-semibold py-2 px-6 rounded-md shadow hover:shadow-lg hover:opacity-90 transition">
-                Envoyer
+              <button type="submit" id="submit-btn"
+                class="bg-[#FCDD42] text-black font-semibold py-2 px-6 rounded-md shadow hover:shadow-lg hover:opacity-90 transition relative">
+                <span id="btn-text">Envoyer</span>
+                <span id="btn-loading" class="hidden">
+                  <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-black inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Envoi en cours...
+                </span>
               </button>
             </div>
           </form>
@@ -254,8 +290,106 @@
           header.classList.remove("border-b", "border-gray-300"); // Supprime la bordure
         }
       });
-    </script>
+      
+      // Gestion de la popup
+      function showPopup(message, isSuccess = true) {
+        const overlay = document.getElementById('popup-overlay');
+        const content = document.getElementById('popup-content');
+        const messageEl = document.getElementById('popup-message');
+        const iconDiv = content.querySelector('.bg-green-100');
+        const iconSvg = content.querySelector('.text-green-600');
+        const title = content.querySelector('h3');
 
+        messageEl.textContent = message;
+
+        if (isSuccess) {
+          iconDiv.className = 'w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4';
+          iconSvg.className = 'w-8 h-8 text-green-600';
+          iconSvg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>';
+          title.textContent = 'Message envoyé !';
+        } else {
+          iconDiv.className = 'w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4';
+          iconSvg.className = 'w-8 h-8 text-red-600';
+          iconSvg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+          title.textContent = 'Erreur !';
+        }
+
+        overlay.classList.remove('hidden');
+        overlay.classList.add('flex');
+        
+        // Animation d'apparition
+        setTimeout(() => {
+          content.style.transform = 'scale(1)';
+        }, 10);
+      }
+
+      function closePopup() {
+        const overlay = document.getElementById('popup-overlay');
+        const content = document.getElementById('popup-content');
+        
+        // Animation de disparition
+        content.style.transform = 'scale(0.95)';
+        
+        setTimeout(() => {
+          overlay.classList.add('hidden');
+          overlay.classList.remove('flex');
+        }, 200);
+      }
+
+      // Fermer la popup en cliquant sur l'overlay
+      document.getElementById('popup-overlay').addEventListener('click', function(e) {
+        if (e.target === this) {
+          closePopup();
+        }
+      });
+
+      // Fermer avec Escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closePopup();
+        }
+      });
+
+      // Gestion du formulaire avec AJAX
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const btnLoading = document.getElementById('btn-loading');
+        
+        // Désactiver le bouton et afficher le loading
+        submitBtn.disabled = true;
+        btnText.classList.add('hidden');
+        btnLoading.classList.remove('hidden');
+        
+        const formData = new FormData(this);
+        
+        fetch('contact.php', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+          if (data.includes('succès') || data.includes('Message envoyé')) {
+            showPopup('Votre message a été envoyé avec succès ! Nous vous contacterons dans les 24h.', true);
+            this.reset(); // Vider le formulaire
+          } else {
+            showPopup('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.', false);
+          }
+        })
+        .catch(error => {
+          console.error('Erreur:', error);
+          showPopup('Une erreur technique est survenue. Veuillez réessayer plus tard.', false);
+        })
+        .finally(() => {
+          // Réactiver le bouton
+          submitBtn.disabled = false;
+          btnText.classList.remove('hidden');
+          btnLoading.classList.add('hidden');
+        });
+      });
+    </script>
 
   </body>
 </html>
