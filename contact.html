@@ -371,16 +371,43 @@
         })
         .then(response => response.text())
         .then(data => {
-          if (data.includes('succès') || data.includes('Message envoyé')) {
-            showPopup('Votre message a été envoyé avec succès ! Nous vous contacterons dans les 24h.', true);
-            this.reset(); // Vider le formulaire
-          } else {
-            showPopup('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.', false);
+          // Debug: afficher la réponse dans la console
+          console.log('Réponse du serveur:', data);
+          
+          try {
+            // Essayer de parser la réponse JSON
+            const jsonData = JSON.parse(data);
+            
+            if (jsonData.success) {
+              showPopup(jsonData.message, true);
+              this.reset(); // Vider le formulaire
+            } else {
+              showPopup(jsonData.message, false);
+            }
+          } catch (e) {
+            // Si ce n'est pas du JSON, traiter comme texte brut
+            const successMessages = [
+              'succès', 'Message envoyé', 'envoyé avec succès', 
+              'bien envoyé', 'correctement envoyé', 'successfully sent'
+            ];
+            
+            const isSuccess = successMessages.some(msg => 
+              data.toLowerCase().includes(msg.toLowerCase())
+            );
+            
+            if (isSuccess) {
+              showPopup('Votre message a été envoyé avec succès ! Nous vous contacterons dans les 24h.', true);
+              this.reset();
+            } else {
+              const cleanData = data.replace(/<[^>]*>/g, '').trim();
+              const errorMessage = cleanData || 'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.';
+              showPopup(errorMessage, false);
+            }
           }
         })
         .catch(error => {
-          console.error('Erreur:', error);
-          showPopup('Une erreur technique est survenue. Veuillez réessayer plus tard.', false);
+          console.error('Erreur réseau:', error);
+          showPopup('Une erreur technique est survenue. Veuillez vérifier votre connexion internet et réessayer.', false);
         })
         .finally(() => {
           // Réactiver le bouton
