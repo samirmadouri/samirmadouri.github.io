@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body .= "Téléphone : $telephone\n";
     $body .= "Message :\n$message\n";
 
-    $headers = "From: $name <$email>\r\n";
+    $headers = "From: contact@a-vos-projets.fr\r\n";  // important : ton email IONOS
     $headers .= "Reply-To: $email\r\n";
 
     if (mail($to, $subject, $body, $headers)) {
