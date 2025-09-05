@@ -662,7 +662,7 @@
         };
       
       // Fonction pour ouvrir la galerie
-      function openGallery(projectId) {
+      window.openGallery = function(projectId) {
           const project = galleryData[projectId];
           if (!project) {
               console.error('Projet non trouvé:', projectId);
@@ -700,7 +700,7 @@
       }
       
       // Fonction pour changer l'image principale
-      function changeMainImage(imageSrc, clickedThumbnail) {
+      window.changeMainImage = function(imageSrc, clickedThumbnail) {
           const mainImage = document.getElementById('gallery-main-image');
           mainImage.src = imageSrc;
       
@@ -712,7 +712,7 @@
       }
       
       // Fonction pour fermer la galerie
-      function closeGallery() {
+      window.closeGallery = function()  {
           const modal = document.getElementById('gallery-modal');
           modal.style.display = 'none';
           document.body.style.overflow = 'auto'; // Rétablir le scroll
