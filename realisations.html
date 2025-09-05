@@ -249,10 +249,14 @@
 
         .gallery-main-image {
             width: 100%;
-            height: 400px;
-            object-fit: cover;
+            max-height: 80vh; /* limite à 80% de la hauteur de l'écran */
+            height: auto;     /* garde les proportions */
+            object-fit: contain; /* adapte l'image sans la couper */
             border-radius: 15px;
             margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .gallery-thumbnails {
