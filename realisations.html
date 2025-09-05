@@ -428,8 +428,8 @@
                       </div>
                   </div>
                   <div class="project-content">
-                      <h3 class="project-title">Immeuble d'habitation - Pantin</h3>
-                      <span class="project-type">Immeuble d'habitation</span>
+                      <h3 class="project-title">Immeuble habitation - Pantin</h3>
+                      <span class="project-type">Immeuble habitation</span>
                       <p class="project-description">
                           Conception complète d'un immeuble d'habitation de 4 niveaux avec abri vélo et parc de jeux. 
                       </p>
@@ -635,7 +635,7 @@
       // Données de la galerie
       const galleryData = {
           'immeuble-pantin': {
-              title: 'Immeuble d'habitation',
+              title: 'Immeuble habitation',
               images: [
                   'images/pmr.jpg',
                   'images/pmr.jpg'
@@ -658,7 +658,7 @@
         };
       
       // Fonction pour ouvrir la galerie
-      window.openGallery = function(projectId) {
+      function openGallery(projectId) {
           const project = galleryData[projectId];
           if (!project) {
               console.error('Projet non trouvé:', projectId);
@@ -696,7 +696,7 @@
       }
       
       // Fonction pour changer l'image principale
-      window.changeMainImage = function(imageSrc, clickedThumbnail) {
+      function changeMainImage(imageSrc, clickedThumbnail) {
           const mainImage = document.getElementById('gallery-main-image');
           mainImage.src = imageSrc;
       
@@ -708,7 +708,7 @@
       }
       
       // Fonction pour fermer la galerie
-      window.closeGallery = function()  {
+      function closeGallery() {
           const modal = document.getElementById('gallery-modal');
           modal.style.display = 'none';
           document.body.style.overflow = 'auto'; // Rétablir le scroll
