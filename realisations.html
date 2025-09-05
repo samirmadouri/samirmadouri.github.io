@@ -208,8 +208,10 @@
             max-width: 800px;
             background: white;
             border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            overflow-y: auto;   /* permet le scroll vertical */
+            max-height: 90vh;   /* limite à la hauteur de l'écran */
+            display: flex;
+            flex-direction: column;
         }
 
         .modal-header {
