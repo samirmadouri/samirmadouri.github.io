@@ -428,7 +428,7 @@
                       </div>
                   </div>
                   <div class="project-content">
-                      <h3 class="project-title">Construction immeuble<br>Pantin</h3>
+                      <h3 class="project-title">Construction d'immeuble<br>Pantin</h3>
                       <span class="project-type">Immeuble d'habitation</span>
                       <p class="project-description">
                           Conception complète d'un immeuble d'habitation de 4 niveaux avec abri vélo et parc de jeux.
@@ -530,6 +530,35 @@
                           <div class="detail-item">
                               <div class="detail-label">Type</div>
                               <div class="detail-value">Neuf</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+            <div class="project-card">
+                  <div class="project-image" onclick="openGallery('immeuble-st-denis')">
+                      <img src="images/realisations/immeuble_st_denis/immeuble_st_denis_2.jpg" alt="Immeuble St Denis" />
+                      <div class="project-image-overlay">
+                          <div>
+                              <div style="font-size: 1.2rem; margin-bottom: 8px;">Voir la galerie</div>
+                              <div style="font-size: 0.9rem; opacity: 0.9;">Cliquez pour découvrir plus de photos</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="project-content">
+                      <h3 class="project-title">Extension d'immeuble<br>Saint Denis</h3>
+                      <span class="project-type">Immeuble d'habitation</span>
+                      <p class="project-description">
+                          Extension d'un immeuble d'habitation de 330m² sur 4 niveaux à Saint Denis avec modification de l'aménagement intérieur existant.
+                      </p>
+                      <div class="project-details">
+                          <div class="detail-item">
+                              <div class="detail-label">Surface</div>
+                              <div class="detail-value">330 m²</div>
+                          </div>
+                          <div class="detail-item">
+                              <div class="detail-label">Type</div>
+                              <div class="detail-value">Ancien</div>
                           </div>
                       </div>
                   </div>
@@ -664,7 +693,7 @@
       // Données de la galerie
       const galleryData = {
           'immeuble-pantin': {
-              title: 'Construction immeuble - Pantin',
+              title: 'Construction d\'immeuble - Pantin',
               images: [
                   'images/realisations/immeuble_pantin/immeuble_pantin_1.jpg',
                   'images/realisations/immeuble_pantin/immeuble_pantin_2.jpg',
@@ -694,14 +723,25 @@
                 ]
             },
             'piscine-houlbec': {
-                  title: 'Piscine - Houlbec Cocherel', 
-                  images: [
-                      'images/realisations/piscine_houlbec/piscine_houlbec_1.jpg',
-                      'images/realisations/piscine_houlbec/piscine_houlbec_2.jpg',
-                      'images/realisations/piscine_houlbec/piscine_houlbec_3.jpg',
-                      'images/realisations/piscine_houlbec/piscine_houlbec_4.jpg'
-                  ]
-              }
+                title: 'Piscine - Houlbec Cocherel', 
+                images: [
+                    'images/realisations/piscine_houlbec/piscine_houlbec_1.jpg',
+                    'images/realisations/piscine_houlbec/piscine_houlbec_2.jpg',
+                    'images/realisations/piscine_houlbec/piscine_houlbec_3.jpg',
+                    'images/realisations/piscine_houlbec/piscine_houlbec_4.jpg'
+                ]
+            },
+            'immeuble-st-denis': {
+                title: 'Extension d\'immeuble - Saint Denis', 
+                images: [
+                    'images/realisations/immeuble-st-denis/immeuble-st-denis_1.jpg',
+                    'images/realisations/immeuble-st-denis/immeuble-st-denis_2.jpg',
+                    'images/realisations/immeuble-st-denis/immeuble-st-denis_3.jpg',
+                    'images/realisations/immeuble-st-denis/immeuble-st-denis_4.jpg',
+                    'images/realisations/immeuble-st-denis/immeuble-st-denis_5.jpg',
+                    'images/realisations/immeuble-st-denis/immeuble-st-denis_6.jpg'
+                ]
+            }
         };
       
       // Fonction pour ouvrir la galerie
